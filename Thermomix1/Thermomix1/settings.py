@@ -22,16 +22,28 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'thermomix1',
+#         'USER': 'postgres',
+#         'PASSWORD': 'master',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'thermomix1',
-        'USER': 'postgres',
-        'PASSWORD': 'master',
-        'HOST': 'localhost',
+        'NAME': 'project',
+        'USER': 'admin1kkvai9',
+        'PASSWORD': '1AZau2YNI3dx',
+        'HOST': 'postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT',
         'PORT': '',
     }
 }
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = '*'
@@ -143,7 +155,7 @@ INSTALLED_APPS = (
     
     'base',
     'recipes',
-    'shopping'    
+    #'shopping'    
 )
 
 DATE_FORMAT = 'Y-m-d'
